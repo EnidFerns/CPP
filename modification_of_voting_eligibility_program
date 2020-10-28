@@ -1,0 +1,35 @@
+//cpp program to check age is eligible for voting or not
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main()
+{
+    int age;
+    string name;
+
+    cout<<"Enter your name: ";
+    cin>>name;
+    cout<<"\nWelcome "<<name<<endl;
+    cout<<"\n"<<name<<", please enter your age: ";
+    cin>>age;
+
+    while(age<=0)
+    {
+        cout<<"\n\n****ERROR****\nPlease re-enter your age."<<endl;
+        cin>>age;
+    }
+    if(age>=18)
+    {
+        cout<<"\nGo ahead "<<name<<".\nCaste your vote! you are eligible to vote."<<endl;
+    }
+
+
+    else
+        {
+            cout<<"\nSorry "<<name<<", you are not yet eligible to vote.\nYou'll be eligible after "<<18 - age<<" more years!"<<endl;
+        }
+
+    return 0;
+}
